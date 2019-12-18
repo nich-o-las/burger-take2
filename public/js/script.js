@@ -20,7 +20,10 @@ $(function(){
         const id = $(this).data('id');
         $.ajax({
             url: `/${id}`,
-            type: 'DELETE'
-            }).done(location.reload())
+            type: 'DELETE',
+            success: function(data){
+                location.reload()
+            }
+        })
     }
 });
