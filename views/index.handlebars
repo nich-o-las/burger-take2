@@ -1,32 +1,30 @@
-<h1>Eat That Burger!</h1>
-
-<h2>Burgers you've yet to eat:</h2>
-
-<ul>
-    {{#each burgers}}
-        {{#unless eaten}}
-            {{> burger-block eaten=false description = description id = id}}
-        {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Burgers you've eaten:</h2>
-
-<ul>
-    {{#each burgers}}
-        {{#if eaten}}
-            {{> burger-block eaten = true description = description id = id}}
-        {{/if}}
-    {{/each}}
-</ul>
-
+<h1 class="text-center border-bottom">Eat That Burger!</h1>
 <h2>Add a burger</h2>
-<form class="create-form" action="/" method="post">
-
-    <div class="form-group">
-        <label for="burger">Burger Name:</label>
-        <input type="text" id="burger" name="description">
-    </div>
-
-    <button type="submit">Add Burger</button>
+<form class="create-form row form-group input-group col-sm-6" action="/" method="post">
+        <label class="col-sm-3" for="burger">Burger Name:</label>
+        <input class="col-sm-6"type="text" class="input-group-text" 
+        id="burger" name="description">
+    <button type="submit" class="btn btn-outline-primary col-sm-3">Add Burger</button>
 </form>
+<div class="row">
+    <div class="col-sm-6">
+        <h2>Burgers you've yet to eat:</h2>
+        <ul class="list-group">
+            {{#each burgers}}
+            {{#unless eaten}}
+            {{> burger-block eaten=false description = description id = id}}
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+    <div class="col-sm-6">
+        <h2>Burgers you've eaten:</h2>
+        <ul class="list-group">
+            {{#each burgers}}
+            {{#if eaten}}
+            {{> burger-block eaten = true description = description id = id}}
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>

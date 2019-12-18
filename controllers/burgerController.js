@@ -17,7 +17,8 @@ router.get("/", function(req, res) {
 
 router.post("/", function(req, res) {
   burger.create({
-    description: req.body.description
+    description: req.body.description,
+    validate: { len: [1] }
   }).then(() => res.redirect("/"));
 });
 
@@ -31,7 +32,7 @@ router.put("/:id", function(req, res){
 router.delete("/:id", function(req, res){
   burger.destroy(
     {where: {id: req.params.id}}
-  ).then(() => {})
-});
+  ).then(result => res.sendStatus(500))
+});  
 
 module.exports = router;

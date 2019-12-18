@@ -5,7 +5,12 @@ var sequelize = new Sequelize("burger_db", "root", "password", {
 });
 
 const Burger = sequelize.define("sandwich", {
-  description: Sequelize.STRING,
+  description: {
+    type: Sequelize.STRING,
+    validate:{
+      len: [01]
+    }
+  },
   eaten: { type: Sequelize.BOOLEAN, defaultValue: false }
 });
 

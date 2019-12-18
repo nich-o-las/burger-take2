@@ -1,13 +1,13 @@
-<li>
+<li class="list-group-item bg-light">
 	<p>{{description}}</p>
 	{{#unless eaten}}
-	<button class="change-eaten" data-id="{{id}}">
+	<button class="change-eaten btn btn-outline-secondary" data-id="{{id}}">
 		Eat Me!
 	</button>
 	{{/unless}}
 	{{#if eaten}}
-	<button class="del-btn" data-id="{{id}}">
-		DELETE
+	<button class="del-btn btn btn-outline-secondary" data-id="{{id}}">
+		Delete
 	</button>
 	{{/if}}
 </li>
