@@ -1,13 +1,14 @@
 var Sequelize = require("sequelize");
-var sequelize = new Sequelize("burger_db", "root", "password", {
-  dialect: "mysql",
-  "production":{
-    use_env_variable: "JAWSDB_URL"
-  },
-  "development":{
-    host: "localhost",
-  }
-});
+
+if (process.env.JAWSDB_URL){
+  var sequelize = new Sequelize(process.env.JAWSDB_URL);
+} else {
+  var sequelize = new Sequelize("burger_db", "root", "password", {
+    dialect: "mysql",
+    host: "localhost"
+  });
+}
+
 
 const Burger = sequelize.define("sandwich", {
   description: {
