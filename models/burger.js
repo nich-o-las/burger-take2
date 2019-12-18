@@ -1,7 +1,12 @@
 var Sequelize = require("sequelize");
 var sequelize = new Sequelize("burger_db", "root", "password", {
-  host: "localhost",
-  dialect: "mysql"
+  dialect: "mysql",
+  "production":{
+    use_env_variable: "JAWSDB_URL"
+  },
+  "development":{
+    host: "localhost",
+  }
 });
 
 const Burger = sequelize.define("sandwich", {
