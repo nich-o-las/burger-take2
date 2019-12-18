@@ -1,0 +1,13 @@
+<li>
+	<p>{{description}}</p>
+	{{#unless eaten}}
+	<button class="change-eaten" data-id="{{id}}">
+		Eat Me!
+	</button>
+	{{/unless}}
+	{{#if eaten}}
+	<button class="del-btn" data-id="{{id}}">
+		DELETE
+	</button>
+	{{/if}}
+</li>

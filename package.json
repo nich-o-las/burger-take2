@@ -1,0 +1,27 @@
+{
+  "name": "burger-take2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nich-o-las/burger-take2.git"
+  },
+  "author": "Nick Cox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nich-o-las/burger-take2/issues"
+  },
+  "homepage": "https://github.com/nich-o-las/burger-take2#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql2": "^2.0.2",
+    "sequelize": "^5.21.3"
+  }
+}
