@@ -1,5 +1,3 @@
-# BurgerTime!
-
 # Eat The Burger!
 
 ![](./eatThatBurger.gif)
