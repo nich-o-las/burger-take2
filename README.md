@@ -1,6 +1,16 @@
 # BurgerTime!
 
-### Created using Node, Express, Sequelize, Handlebars, JQuery, and Bootstrap.
+# Eat The Burger!
+
+![](./eatThatBurger.gif)
+
+## Tools Used:
+1. NodeJS
+2. Express
+3. Sequelize
+4. HandlebarsJS
+5. JQuery
+6. Bootstrap
 
 ## User Story: 
 ### As a Burger Enthusiast: 
@@ -8,4 +18,4 @@
 2. I would like the burgers to be sorted by whether or not I've eaten them yet.
 3. If I want to forget the horror of a burger I've eaten in the past, I want to be able to delete the burger from my records.
 
-### Deployed app: https://young-woodland-41492.herokuapp.com/
+## View the deployed app [HERE](https://young-woodland-41492.herokuapp.com/)
